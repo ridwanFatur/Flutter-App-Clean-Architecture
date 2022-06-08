@@ -1,0 +1,47 @@
+{
+  "page": 1,
+  "total_pages": 1,
+  "total_results": 7,
+  "results": [
+    {
+      "id": 1,
+      "title": "title",
+      "release_date": "2022-06-08",
+      "vote_average": 1.0,
+      "poster_path": "posterImagePath",
+      "overview": "overview"
+    },
+    {
+      "id": 2,
+      "title": "title",
+      "release_date": "2022-06-08",
+      "vote_average": 1.0,
+      "poster_path": "posterImagePath",
+      "overview": "overview"
+    },
+    {
+      "id": 3,
+      "title": "title",
+      "release_date": "2022-06-08",
+      "vote_average": 1.0,
+      "poster_path": "posterImagePath",
+      "overview": "overview"
+    },
+    {
+      "id": 4,
+      "title": "title",
+      "release_date": "2022-06-08",
+      "vote_average": 1.0,
+      "poster_path": "posterImagePath",
+      "overview": "overview"
+    },
+    {
+      "id": 5,
+      "title": "title",
+      "release_date": "2022-06-08",
+      "vote_average": 1.0,
+      "poster_path": "posterImagePath",
+      "overview": "overview"
+    }
+  ]
+}
