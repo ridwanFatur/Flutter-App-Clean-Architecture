@@ -120,6 +120,7 @@ class DataListLayout extends StatelessWidget {
         return false;
       },
       child: SingleChildScrollView(
+        key: const Key('DataListLayout'),
         child: Column(
           children: [
             ...List.generate(
@@ -127,6 +128,7 @@ class DataListLayout extends StatelessWidget {
               (index) {
                 Movie movie = movieList[index];
                 return ItemMovieLayout(
+                  key: Key("${movie.id}"),
                   movie: movie,
                   onPressItem: onPressItem,
                 );
@@ -144,7 +146,7 @@ class ItemMovieLayout extends StatelessWidget {
   final Movie movie;
   final VoidCallback onPressItem;
   const ItemMovieLayout({
-    Key? key,
+    required Key key,
     required this.movie,
     required this.onPressItem,
   }) : super(key: key);
