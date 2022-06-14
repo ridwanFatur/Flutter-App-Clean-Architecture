@@ -3,7 +3,7 @@ class Urls{
   static const String kBaseUrl = "https://api.themoviedb.org/3/";
 
   // API KEY
-  static const String kApiKey = "<YOUR API KEY>";
+  static const String kApiKey = "b43ea3b03ead9cd6a102769018a8761f";
 
   // URL 
   static const String popularMovie = "${kBaseUrl}movie/popular";
@@ -16,4 +16,6 @@ class Urls{
   static String posterReguler(String path) => "https://image.tmdb.org/t/p/w500$path";
   static String posterSmall(String path) => "https://image.tmdb.org/t/p/w200$path";
   static const String posterNotFound = "https://lightwidget.com/wp-content/uploads/local-file-not-found.png";
+
+  static String searchMovieUrlDio(String query, int page) => "${kBaseUrl}search/movie?query=$query&page=$page";
 }

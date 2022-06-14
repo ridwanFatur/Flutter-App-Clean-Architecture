@@ -14,6 +14,6 @@ import 'package:http/http.dart' as http;
   GetSearchMovieList,
   MovieListNotifier,
 ], customMocks: [
-  MockSpec<http.Client>(as: #MockHttpClient)
+  MockSpec<http.Client>(as: #MockHttpClient),
 ])
 void main(){}

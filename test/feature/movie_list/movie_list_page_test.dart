@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_architecture/core/constants/urls.dart';
 import 'package:flutter_clean_architecture/core/enums/network_result.dart';
 import 'package:flutter_clean_architecture/core/types.dart';
 import 'package:flutter_clean_architecture/domain/entities/movie.dart';

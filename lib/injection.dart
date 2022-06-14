@@ -1,3 +1,5 @@
+import 'package:dio/dio.dart';
+import 'package:flutter_clean_architecture/core/dio_interceptor.dart';
 import 'package:flutter_clean_architecture/data/data_sources/movies_remote_data_souce.dart';
 import 'package:flutter_clean_architecture/data/repositories/movies_repository_impl.dart';
 import 'package:flutter_clean_architecture/domain/repositories/movies_repository.dart';
@@ -23,12 +25,22 @@ void init() {
   );
 
   // data source
-  locator.registerLazySingleton<MoviesRemoteDataSource>(
-    () => MoviesRemoteDateSourceImpl(
+  // locator.registerLazySingleton<MoviesRemoteDataSource>(
+  //   () => MoviesRemoteDateSourceImpl(
+  //     client: locator(),
+  //   ),
+  // );
+    locator.registerLazySingleton<MoviesRemoteDataSource>(
+    () => MoviesRemoteDateSourceDioImpl(
       client: locator(),
     ),
   );
 
   // external
+  final Dio dio = Dio();
+  dio.interceptors.add(DioInterceptors(dio));
+
   locator.registerLazySingleton(() => http.Client());
+  locator.registerLazySingleton(() => dio);
+  
 }
