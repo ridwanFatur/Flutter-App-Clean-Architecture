@@ -5,6 +5,8 @@ import 'package:flutter_clean_architecture/data/repositories/movies_repository_i
 import 'package:flutter_clean_architecture/domain/repositories/movies_repository.dart';
 import 'package:flutter_clean_architecture/domain/usecases/get_search_movie_list.dart';
 import 'package:flutter_clean_architecture/feature/movie_list/movie_list_notifier.dart';
+import 'package:flutter_clean_architecture/feature/rxdart_screen/counter_bloc_notifier.dart';
+import 'package:flutter_clean_architecture/feature/use_selector_screen/simple_notifier.dart';
 import 'package:http/http.dart' as http;
 import 'package:get_it/get_it.dart';
 
@@ -13,6 +15,8 @@ final locator = GetIt.instance;
 void init() {
   // notifier
   locator.registerFactory(() => MovieListNotifier(locator()));
+  locator.registerFactory(() => CounterBlocNotifier());
+  locator.registerFactory(() => SimpleNotifier());
 
   // usecase
   locator.registerLazySingleton(() => GetSearchMovieList(locator()));

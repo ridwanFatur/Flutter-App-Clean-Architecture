@@ -8,6 +8,8 @@ class DioInterceptors extends InterceptorsWrapper {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     print("onRequest Dio");
+    print(options.path);
+
     if (options.headers.containsKey('requiresApiKey')) {
       options.queryParameters["api_key"] = Urls.kApiKey;
     }

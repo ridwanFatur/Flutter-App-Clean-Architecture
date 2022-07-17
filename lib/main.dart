@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: const Color(0xff25262E),
         textTheme: kTextThemeDark,
       ),
-      initialRoute: "/",
+      initialRoute: "/use_selector",
       onGenerateRoute: _router.onGenerateRoute,
     );
   }
